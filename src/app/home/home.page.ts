@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Storage} from '@ionic/storage-angular'; //import for storage 
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-stories:any[]=[];
-  constructor() {}
+  myCategory:any="";
+  constructor(private storage:Storage) {}
+  
+  async ionViewWillEnter(){
+    this.myCategory = await this.storage.get("Genre"); //this will dispaly the genre that have been selected by user on the home pg
+  }
   
 }

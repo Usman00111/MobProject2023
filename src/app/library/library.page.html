@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Library</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Library</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-button [routerLink]="['/home']">Home </ion-button>
+  <h3>Below are links for the local Libraries in Galway.</h3> <!--this is a message for user -->
+  <ion-button (click)="getlibrary()">Galway Library</ion-button><!--these are the buttons that are linked to the according websites-->
+  <ion-button (click)="getlibrary1()">Ballybane Library</ion-button>
+  <ion-button (click)="getlibrary2()">Galway City Library</ion-button>
+  <ion-button (click)="getlibrary3()">ATU Library</ion-button>
+  <ion-button (click)="getlibrary4()">NUI Library</ion-button>
+
+
+</ion-content>
+
+

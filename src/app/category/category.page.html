@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>Category</ion-title>
+  </ion-toolbar>
+</ion-header>
+<!--this is the display for my catefory page where it will allow you to choose the fav genre and store -->
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-radio-group [(ngModel)]="myGenre" >
+  <!--ive used radio button to display the options -->
+      <ion-item>
+        <ion-label>Drama</ion-label>   
+        <ion-radio value="Drama"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Fiction</ion-label>
+        <ion-radio value="Fiction"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Non-Fiction</ion-label>
+        <ion-radio value="Non-Fiction"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Poetry</ion-label>
+        <ion-radio value="Poetry"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-button (click)="onSave()">Save</ion-button>
+
+</ion-content>

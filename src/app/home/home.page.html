@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      The Book Haven
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,11 +9,53 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">The Book Haven</ion-title>
     </ion-toolbar>
   </ion-header>
 
+  <!--below is my style tag which has the styles and modification for home page-->
   <div id="container">
- <h3>Welcome to Mobile Apps Starter project 2023</h3>
-  </div>
+    <style>
+      ion-title{
+        color: black;
+        text-align: center;
+      }
+      h3{
+        background-color: aqua;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      p{
+        text-align: center;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 10px;
+      }
+      ion-label{
+        color: red;
+        padding-top: 5px;
+      }
+
+    </style>
+    <!--This is a welcome message -->
+  <h3>Welcome to The Book Haven</h3>
+  <p>Your one-stop shop for all things book-related. </p>
+  <br>
+  <p>We're passionate about reading and want to help you find your next great read.</p>
+
+  <!--these are the buttons for all the different pages-->
+<ion-button [routerLink]="['/book-api']">New Books </ion-button>
+<br>
+<ion-button [routerLink]="['/library']">Library Website </ion-button>
+<br>
+<ion-label>My favourite Genre is: {{myCategory}}</ion-label><br>
+<br>
+<ion-button [routerLink]="['/category']">Set Genre</ion-button>
+<br>
+<ion-button [routerLink]="['/review']">Review </ion-button>
+
+</div>
 </ion-content>
+
